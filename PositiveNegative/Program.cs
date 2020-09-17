@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace PositiveNegative
 {
@@ -9,13 +10,16 @@ namespace PositiveNegative
             /*The program checks if the number is positive or negative*/
             Console.WriteLine("Enter your number: ");
 
-            int userNumber = Console.ReadLine();
-            if(userNumber > 0)
+            int userNumber = Int32.Parse(Console.ReadLine());
+            if(userNumber < 0)
             {
                 Console.WriteLine("The number is negative.");
-            } else if
+            } else if(userNumber > 0)
             {
                 Console.WriteLine("The number is positive.");
+            }else
+            {
+                Console.WriteLine("The number is 0");
             }
 
         }
